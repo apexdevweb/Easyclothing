@@ -6,14 +6,8 @@ include("includes/head.php");
 ?>
 
 <body>
-    <h1 class="ml1">
-        <span class="text-wrapper">
-            <span class="line line1"></span>
-            <span class="letters">EASY-CLOTHING</span>
-            <span class="line line2"></span>
-        </span>
-    </h1>
     <?php
+    include("includes/logo.php");
     include("includes/header.php");
     ?>
     <main>
@@ -36,31 +30,35 @@ include("includes/head.php");
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-
+        <br>
         <section id="#S2">
             <form method="GET" id="formS2">
-                <label for="categorie">Catégorie</label>
-                <select name="categorie" id="">
-                    <option value="pull">pull</option>
-                    <option value="pentalons">pentalons</option>
-                    <option value="chemise">chemise</option>
-                </select>
-                <label for="Marque">Marques</label>
-                <select name="Marque" id="">
-                    <option value="Nike">Nike</option>
-                    <option value="Addidas">Addidas</option>
-                    <option value="Dvs">Dvs</option>
-                </select>
+                <div class="categorie_container">
+                    <label for="categorie">Catégorie<i class="fa-solid fa-chevron-right"></i></label>
+                    <select name="categorie" id="">
+                        <option value="pull">pull</option>
+                        <option value="pentalons">pentalons</option>
+                        <option value="chemise">chemise</option>
+                    </select>
+                </div>
+                <div class="marque_container">
+                    <label for="Marque">Marques<i class="fa-solid fa-chevron-right"></i></label>
+                    <select name="Marque" id="">
+                        <option value="Nike">Nike</option>
+                        <option value="Addidas">Addidas</option>
+                        <option value="Dvs">Dvs</option>
+                    </select>
+                </div>
             </form>
+            <br>
             <div class="card">
                 <article>
-                    <blockquote>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quaerat.</p>
-                    </blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quaerat.</p>
                     <figure>
                         <img src="image/701d72933cb740b89850bdc49330d701.webp" alt="">
                         <figcaption>
                             <small>Lorem ipsum dolor sit amet consectetur.</small>
+                            <br>
                             <div class="shop_icon">
                                 <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
                                 <a href=""><i class="fa-regular fa-heart"></i></a>

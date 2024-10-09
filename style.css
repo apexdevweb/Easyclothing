@@ -1,3 +1,6 @@
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +9,7 @@ body {
 }
 :root {
   --text-shadow-txshw1: 0px 0px 2px #000;
-  --box-shadow-bxshw1: 0px 0px 2px #000;
+  --box-shadow-bxshw1: 0px 0px 5px #000;
 }
 /*Titre h1*/
 .ml1 {
@@ -51,7 +54,7 @@ header {
   width: 100%;
 }
 /* navigation */
-nav {
+.firstNav {
   padding: 5px;
   display: flex;
   flex-flow: row nowrap;
@@ -62,6 +65,7 @@ nav {
   overflow: hidden;
 }
 .myLinks {
+  text-align: right;
   visibility: hidden;
   height: 0;
   width: 0;
@@ -70,12 +74,13 @@ nav {
   transition: 0.6s ease-in-out;
   overflow: hidden;
 }
-li {
+.firstLi {
   height: auto;
   width: 100%;
   list-style-type: none;
+  overflow: hidden;
 }
-li > a {
+.firstLi > a {
   height: auto;
   width: 100%;
   font-size: 1.5rem;
@@ -83,16 +88,16 @@ li > a {
   text-decoration: none;
   color: #000;
 }
-li > a:hover {
+.firstLi > a:hover {
   text-decoration: underline;
 }
-li > a > span {
+.firstLi > a > span {
   font-size: 1.9rem;
   text-decoration: none;
   color: #000;
   text-shadow: var(--text-shadow-txshw1);
 }
-li > form {
+.firstLi > #navForm {
   height: 5vh;
   width: 100%;
   display: flex;
@@ -100,23 +105,25 @@ li > form {
   align-items: center;
   justify-content: space-evenly;
 }
-li > form > input[type="email"],
-input[type="password"] {
-  height: 2vh;
-  width: 20vw;
+.firstLi > #navForm > input {
+  text-align: center;
+  height: 3vh;
+  width: 30vw;
+  font-size: 1rem;
   border-radius: 5px;
 }
-li > p {
+
+.firstLi > p {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
 }
-li > p > a > span {
+.firstLi > p > a > span {
   color: #000;
   font-size: 1.5rem;
 }
-li > p > a {
+.firstLi > p > a {
   letter-spacing: 3px;
   color: #000;
 }
@@ -140,10 +147,11 @@ li > p > a {
   right: 0;
 }
 .show {
+  margin-right: auto;
+  margin-left: auto;
   height: auto;
-  text-align: right;
   visibility: visible;
-  width: 70%;
+  width: 85%;
 }
 /* Rotate first bar */
 .change .bar1 {
@@ -161,10 +169,13 @@ li > p > a {
 }
 /* navigation fin*/
 /* header fin*/
+/* section 1 */
+
 /* swiperjs */
 .swiper {
   width: 100%;
   height: 50vh;
+  box-shadow: var(--box-shadow-bxshw1);
 }
 
 .swiper-slide {
@@ -184,17 +195,53 @@ li > p > a {
   object-fit: cover;
 }
 /* swiperjs fin */
-/* nav section 2 */
+/* section 1 fin*/
+/* section 2 */
 
-#S2 > #formS2 {
+/* nav section 2 */
+#S2 {
+  height: auto;
+  width: 100%;
+}
+#formS2 {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-start;
-  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
   height: 20vh;
   width: 100%;
-  background-color: red;
   box-shadow: var(--box-shadow-bxshw1);
+}
+.categorie_container,
+.marque_container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.categorie_container > label {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.marque_container > label {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.categorie_container > label > i {
+  font-size: 1rem;
+}
+.marque_container > label > i {
+  font-size: 1rem;
+}
+.categorie_container > select {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.marque_container > select {
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 /* nav section 2 fin*/
 /* grille de vêtement */
@@ -206,11 +253,20 @@ li > p > a {
   padding: 5px;
   height: auto;
   width: 100%;
-  background-color: aqua;
+  box-shadow: var(--box-shadow-bxshw1);
+}
+article {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
 article > figure > img {
-  height: 25vh;
-  width: 50vw;
+  max-height: 25vh;
+  max-width: 50vw;
 }
 article > figure > figcaption {
   display: flex;
@@ -229,3 +285,59 @@ article > figure > figcaption > .shop_icon {
 }
 
 /* grille de vêtement fin*/
+/* section 2 fin*/
+/* signup */
+legend > #signupH2 {
+  text-align: center;
+  text-decoration: underline;
+}
+#signupH2 > span {
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
+#signForm {
+  max-height: 80vh;
+  max-width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#signForm > input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  max-height: 4vh;
+  max-width: 80%;
+  border-radius: 5px;
+}
+#signForm > input[type="submit"] {
+  max-height: 4vh;
+  max-width: 80%;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+}
+#signForm > p {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+#signForm > p > a {
+  letter-spacing: 3px;
+  color: #000;
+}
+#signForm > p > a > span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+}
+input:focus {
+  background-color: #000;
+  color: #fff;
+}
+/* signup fin*/

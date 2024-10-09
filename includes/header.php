@@ -4,14 +4,14 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
-    <nav>
+    <nav id="firstNav">
         <ul class="myLinks">
-            <li><a href=""><span>P</span>rintemp </a></li>
-            <li><a href=""><span>E</span>te</a></li>
-            <li><a href=""><span>A</span>utomne</a></li>
-            <li><a href=""><span>H</span>iver</a></li>
-            <li>
-                <form method="POST">
+            <li class="firstLi"><a href=""><span>P</span>rintemp </a></li>
+            <li class="firstLi"><a href=""><span>E</span>te</a></li>
+            <li class="firstLi"><a href=""><span>A</span>utomne</a></li>
+            <li class="firstLi"><a href=""><span>H</span>iver</a></li>
+            <li class="firstLi">
+                <form method="POST" id="navForm">
                     <input type="email" name="Mail" id="" placeholder="e-mail">
                     <input type="password" name="Pass" id="" placeholder="password">
                     <input type="submit" name="Login" value="connexion">
