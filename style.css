@@ -2,9 +2,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 :root {
   --text-shadow-txshw1: 0px 0px 2px #000;
+  --box-shadow-bxshw1: 0px 0px 2px #000;
 }
 /*Titre h1*/
 .ml1 {
@@ -43,6 +45,11 @@ body {
   bottom: 0;
 }
 /*Titre h1 fin*/
+/* header */
+header {
+  height: auto;
+  width: 100%;
+}
 /* navigation */
 nav {
   padding: 5px;
@@ -56,11 +63,11 @@ nav {
 }
 .myLinks {
   visibility: hidden;
-  height: auto;
+  height: 0;
   width: 0;
   display: flex;
   flex-flow: column nowrap;
-  transition: 0.5s ease-in-out;
+  transition: 0.6s ease-in-out;
   overflow: hidden;
 }
 li {
@@ -85,7 +92,36 @@ li > a > span {
   color: #000;
   text-shadow: var(--text-shadow-txshw1);
 }
+li > form {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+li > form > input[type="email"],
+input[type="password"] {
+  height: 2vh;
+  width: 20vw;
+  border-radius: 5px;
+}
+li > p {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+li > p > a > span {
+  color: #000;
+  font-size: 1.5rem;
+}
+li > p > a {
+  letter-spacing: 3px;
+  color: #000;
+}
 .burgerContainer {
+  float: right;
   display: block;
   cursor: pointer;
   height: auto;
@@ -104,6 +140,7 @@ li > a > span {
   right: 0;
 }
 .show {
+  height: auto;
   text-align: right;
   visibility: visible;
   width: 70%;
@@ -123,6 +160,7 @@ li > a > span {
   transform: translate(0, -11px) rotate(45deg);
 }
 /* navigation fin*/
+/* header fin*/
 /* swiperjs */
 .swiper {
   width: 100%;
@@ -146,6 +184,19 @@ li > a > span {
   object-fit: cover;
 }
 /* swiperjs fin */
+/* nav section 2 */
+
+#S2 > #formS2 {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  height: 20vh;
+  width: 100%;
+  background-color: red;
+  box-shadow: var(--box-shadow-bxshw1);
+}
+/* nav section 2 fin*/
 /* grille de vêtement */
 .card {
   display: flex;

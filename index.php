@@ -38,6 +38,20 @@ include("includes/head.php");
         </section>
 
         <section id="#S2">
+            <form method="GET" id="formS2">
+                <label for="categorie">Catégorie</label>
+                <select name="categorie" id="">
+                    <option value="pull">pull</option>
+                    <option value="pentalons">pentalons</option>
+                    <option value="chemise">chemise</option>
+                </select>
+                <label for="Marque">Marques</label>
+                <select name="Marque" id="">
+                    <option value="Nike">Nike</option>
+                    <option value="Addidas">Addidas</option>
+                    <option value="Dvs">Dvs</option>
+                </select>
+            </form>
             <div class="card">
                 <article>
                     <blockquote>
