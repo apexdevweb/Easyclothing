@@ -219,7 +219,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: stretch;
 }
 .categorie_container > label {
   font-size: 1.2rem;
@@ -252,7 +252,8 @@ header {
   justify-content: space-around;
   padding: 5px;
   height: auto;
-  width: 100%;
+  max-width: 50vw;
+  background-color: bisque;
   box-shadow: var(--box-shadow-bxshw1);
 }
 article {

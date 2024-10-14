@@ -9,8 +9,8 @@ if (isset($_POST['register'])) {
         $user_firstName = htmlspecialchars(strip_tags($_POST['prenom']));
         $user_lastName = htmlspecialchars(strip_tags($_POST['nom']));
         $user_mail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
-        $user_pass = ($_POST['pass']);
-        $user_confirmPass = ($_POST['confirm_pass']);
+        $user_pass = htmlspecialchars(strip_tags($_POST['pass']));
+        $user_confirmPass = htmlspecialchars(strip_tags($_POST['confirm_pass']));
         $user_adresse = htmlspecialchars(strip_tags($_POST['adresse']));
         $user_phone = htmlspecialchars(strip_tags($_POST['phone']));
 

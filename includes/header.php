@@ -1,4 +1,5 @@
 <header>
+    <h4>Bienvenue<?= " " . $_SESSION['last_name'] ?></h4>
     <div class="burgerContainer" onclick="myFunction(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -17,6 +18,7 @@
                     <input type="submit" name="Login" value="connexion">
                 </form>
                 <p><a href="signup.php"><span>C</span>reer un compte<i class="fa-solid fa-arrow-right"></i></a></p>
+                <p><a href="backend/users/logout.php"><span>D</span>éconexion<i class="fa-solid fa-arrow-right"></i></a></p>
             </li>
         </ul>
     </nav>
