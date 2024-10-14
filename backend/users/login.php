@@ -1,5 +1,4 @@
 <?php
-session_start();
 require("backend/database.php");
 
 if (isset($_POST['Login'])) {
@@ -17,7 +16,8 @@ if (isset($_POST['Login'])) {
 
             if (password_verify($userPass, $clientpass)) {
 
-                $_SESSSION['validAuth'] = true;
+                $_SESSION['validAuth'] = true;
+                $secure_auth = $_SESSION['validAuth'];
                 $_SESSION['id'] = $clientInfos['id_client'];
                 $_SESSION['first_name'] = $clientInfos['client_first_name'];
                 $_SESSION['last_name'] = $clientInfos['client_last_name'];
@@ -35,6 +35,4 @@ if (isset($_POST['Login'])) {
     } else {
         echo "tous les champs ne sont pas remplis";
     }
-} else {
-    echo "Vous pouvez vous connecter ou creer un compte si vous n'en avez pas encore ";
 }

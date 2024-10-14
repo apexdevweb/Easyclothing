@@ -11,6 +11,11 @@ body {
   --text-shadow-txshw1: 0px 0px 2px #000;
   --box-shadow-bxshw1: 0px 0px 5px #000;
 }
+/* icone fontawesom */
+i {
+  color: #000;
+}
+/* icone fontawesom fin*/
 /*Titre h1*/
 .ml1 {
   margin-top: 1vh;
@@ -65,6 +70,7 @@ header {
   overflow: hidden;
 }
 .myLinks {
+  padding: 0;
   text-align: right;
   visibility: hidden;
   height: 0;
@@ -97,20 +103,28 @@ header {
   color: #000;
   text-shadow: var(--text-shadow-txshw1);
 }
-.firstLi > #navForm {
-  height: 5vh;
-  width: 100%;
+#navForm {
+  padding: 5px;
+  margin-left: auto;
+  margin-right: 1vw;
+  height: auto;
+  min-width: 50vw;
+  max-width: 100%;
+  background-color: #000;
+  overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
+  border-radius: 5px;
 }
-.firstLi > #navForm > input {
+#navForm > input {
   text-align: center;
-  height: 3vh;
-  width: 30vw;
+  height: 2.5vh;
+  max-width: 28vw;
   font-size: 1rem;
   border-radius: 5px;
+  border: none;
 }
 
 .firstLi > p {
@@ -210,6 +224,7 @@ header {
   justify-content: space-evenly;
   height: 20vh;
   width: 100%;
+  padding: 10px;
   box-shadow: var(--box-shadow-bxshw1);
 }
 .categorie_container,
@@ -218,8 +233,8 @@ header {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
-  justify-content: stretch;
+  align-items: stretch;
+  justify-content: center;
 }
 .categorie_container > label {
   font-size: 1.2rem;
