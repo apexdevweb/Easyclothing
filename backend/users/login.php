@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("backend/database.php");
 
 if (isset($_POST['Login'])) {
@@ -17,15 +18,12 @@ if (isset($_POST['Login'])) {
             if (password_verify($userPass, $clientpass)) {
 
                 $_SESSION['validAuth'] = true;
-                $secure_auth = $_SESSION['validAuth'];
                 $_SESSION['id'] = $clientInfos['id_client'];
                 $_SESSION['first_name'] = $clientInfos['client_first_name'];
                 $_SESSION['last_name'] = $clientInfos['client_last_name'];
                 $_SESSION['mail'] = $clientInfos['client_mail'];
                 $_SESSION['adresse'] = $clientInfos['client_adresse'];
                 $_SESSION['phone_number'] = $clientInfos['client_phone_number'];
-
-                // header("Location: index.php");
             } else {
                 echo "mot de passe incorrecte";
             }

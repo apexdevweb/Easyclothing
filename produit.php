@@ -1,10 +1,5 @@
-<?php
-session_start();
-require("backend/users/login.php");
-?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <?php
 include("includes/head.php");
 ?>
@@ -22,13 +17,15 @@ include("includes/head.php");
             <div class="G"><img src="image/cb7d558bf73f4b40b44baf29ee52b793.webp"></div>
         </div>
         <br>
-        <div class="shop_icon">
+        <div class="shop_icon_produit">
             <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
             <a href=""><i class="fa-regular fa-heart"></i></a>
             <a href=""><i class="fa-solid fa-share-nodes"></i></a>
         </div>
         <br>
-        <a href="index.php">Retour</a>
+        <div class="retour_wrapper">
+            <a href="index.php"><i class="fa-solid fa-arrow-left"></i><span>R</span>etour</a>
+        </div>
     </main>
     <?php
     include("includes/footer.php");

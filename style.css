@@ -208,6 +208,10 @@ header {
   height: 100%;
   object-fit: cover;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+}
 /* swiperjs fin */
 /* section 1 fin*/
 /* section 2 */
@@ -452,4 +456,34 @@ input:focus {
   height: auto;
   width: 100%;
 }
+.shop_icon_produit {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* liens retour */
+.retour_wrapper {
+  height: auto;
+  width: 100%;
+}
+.retour_wrapper > a {
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.retour_wrapper > a > span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
+.retour_wrapper > a:hover {
+  text-decoration: underline;
+}
+/* liens retour fin*/
 /* produit.php fin*/

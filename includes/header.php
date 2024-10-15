@@ -1,12 +1,14 @@
+<?php
+require("backend/users/login.php");
+?>
 <header>
     <?php
-    if (isset($secure_auth)) {
+    if (isset($_SESSION['validAuth'])) {
     ?>
         <h4>Bienvenue<?= " " . $_SESSION['last_name'] ?></h4>
     <?php
     }
     ?>
-
     <div class="burgerContainer" onclick="myFunction(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -26,7 +28,7 @@
                 </form>
                 <p><a href="signup.php"><span>C</span>reer un compte<i class="fa-solid fa-arrow-right"></i></a></p>
                 <?php
-                if (isset($secure_auth)) {
+                if (isset($_SESSION['validAuth'])) {
                 ?>
                     <p><a href="backend/users/logout.php"><span>D</span>éconexion<i class="fa-solid fa-arrow-right"></i></a></p>
                 <?php
@@ -36,3 +38,5 @@
         </ul>
     </nav>
 </header>
+<br>
+<br>
