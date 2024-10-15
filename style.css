@@ -59,6 +59,41 @@ header {
   width: 100%;
 }
 /* navigation */
+/* session navigation utilisateur */
+#session_user_container {
+  padding: 3px;
+  height: auto;
+  max-width: 50vw;
+  display: block;
+}
+#session_user_container > h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: underline;
+}
+#session_user_container > h4 > span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
+#user_ul {
+  margin: 5px 0 0 0;
+  padding: 0;
+  height: auto;
+  max-width: 30vw;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.user_li {
+  list-style-type: none;
+}
+
+/* session navigation utilisateur fin*/
 .firstNav {
   padding: 5px;
   display: flex;

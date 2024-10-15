@@ -5,7 +5,13 @@ require("backend/users/login.php");
     <?php
     if (isset($_SESSION['validAuth'])) {
     ?>
-        <h4>Bienvenue<?= " " . $_SESSION['last_name'] ?></h4>
+        <div id="session_user_container">
+            <h4><span>B</span>ienvenue<?= " " . $_SESSION['last_name'] ?></h4>
+            <ul id="user_ul">
+                <li class="user_li"><a href="#"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li class="user_li"><a href="#"><i class="fa-solid fa-user-gear"></i></a></li>
+            </ul>
+        </div>
     <?php
     }
     ?>
