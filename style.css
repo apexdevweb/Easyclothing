@@ -217,6 +217,36 @@ header {
   height: auto;
   width: 100%;
 }
+#ul_categorie {
+  padding: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.li_categorie {
+  height: auto;
+  width: auto;
+  list-style-type: none;
+}
+.li_categorie > a {
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-decoration: wavy;
+}
+.li_categorie > a:hover {
+  text-decoration: underline;
+}
+.li_categorie > a > span {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
 #formS2 {
   display: flex;
   flex-flow: column wrap;
@@ -224,7 +254,7 @@ header {
   justify-content: space-evenly;
   height: 20vh;
   width: 100%;
-  padding: 10px;
+
   box-shadow: var(--box-shadow-bxshw1);
 }
 .categorie_container,
@@ -357,3 +387,69 @@ input:focus {
   color: #fff;
 }
 /* signup fin*/
+/* produit.php */
+.container {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3.5fr 0.1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "A B E"
+    "A C F"
+    "A D G";
+  box-shadow: var(--box-shadow-bxshw1);
+  background-color: #000;
+}
+
+.A {
+  grid-area: A;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.A > img {
+  height: 65vh;
+  width: 100vw;
+}
+
+.E {
+  grid-area: E;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.E > img {
+  height: auto;
+  width: 100%;
+}
+
+.F {
+  grid-area: F;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.F > img {
+  height: auto;
+  width: 100%;
+}
+
+.G {
+  grid-area: G;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.G > img {
+  height: auto;
+  width: 100%;
+}
+/* produit.php fin*/
