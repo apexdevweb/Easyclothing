@@ -1,5 +1,4 @@
 <?php
-session_start();
 require("backend/database.php");
 
 if (isset($_POST['Login'])) {

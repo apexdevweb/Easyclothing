@@ -9,6 +9,7 @@ body {
 }
 :root {
   --text-shadow-txshw1: 0px 0px 2px #000;
+  --text-shadow-txshw2: 0px 0px 1px #000;
   --box-shadow-bxshw1: 0px 0px 5px #000;
 }
 /* icone fontawesom */
@@ -59,6 +60,60 @@ header {
   width: 100%;
 }
 /* navigation */
+/* session navigation administrateur */
+#session_admin_container {
+  padding: 3px;
+  height: auto;
+  max-width: 90vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#session_admin_container > h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: underline;
+}
+#session_admin_container > h4 > span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
+#admin_ul {
+  margin: 5px 0 0 0;
+  padding: 0;
+  height: auto;
+  width: 90vw;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#admin_ul > p {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: underline;
+}
+#admin_ul > p > a {
+  text-decoration: none;
+  color: #000;
+}
+#admin_ul > p > a > span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
+.admin_li {
+  list-style-type: none;
+}
+/* session navigation administrateur fin*/
 /* session navigation utilisateur */
 #session_user_container {
   padding: 3px;
@@ -329,16 +384,26 @@ header {
 }
 /* nav section 2 fin*/
 /* grille de vêtement */
+#card_container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
 .card {
+  margin: auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
   padding: 5px;
-  height: auto;
-  max-width: 50vw;
+  max-height: 40vh;
+  max-width: 40vw;
   background-color: bisque;
   box-shadow: var(--box-shadow-bxshw1);
+  overflow: hidden;
 }
 article {
   height: auto;
@@ -349,9 +414,20 @@ article {
   justify-content: space-around;
   text-align: center;
 }
+article > a {
+  font-size: 1.2rem;
+  text-shadow: var(--text-shadow-txshw2);
+  letter-spacing: 1px;
+  color: #000;
+}
+article > a:hover {
+  transform: scale(1.04);
+  letter-spacing: 3px;
+  transition: 0.3s ease-in-out;
+}
 article > figure > img {
-  max-height: 25vh;
-  max-width: 50vw;
+  max-height: 20vh;
+  max-width: 40vw;
 }
 article > figure > figcaption {
   display: flex;
@@ -426,6 +502,88 @@ input:focus {
   color: #fff;
 }
 /* signup fin*/
+/*insertproduit.php*/
+#section_insertion_produit {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  padding: 3px;
+}
+#section_insertion_produit > fieldset {
+  text-align: center;
+  margin: auto;
+  height: auto;
+  max-width: 80vw;
+  overflow: hidden;
+  letter-spacing: 3px;
+  color: #000;
+  font-size: 1.1rem;
+}
+#section_insertion_produit > fieldset > form {
+  margin: 0;
+  height: auto;
+  max-width: 80vw;
+  padding: 3px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+#section_insertion_produit > fieldset > form > label {
+  letter-spacing: 1px;
+  color: #000;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+#section_insertion_produit > fieldset > form > input,
+select {
+  height: 2.5vh;
+  width: 60vw;
+  margin: 5px 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+#section_insertion_produit > fieldset > form > input,
+select {
+  height: 3vh;
+  width: 60vw;
+  margin: 5px 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+#section_insertion_produit > fieldset > form > input[type="file"] {
+  height: 2.5vh;
+  width: 40vw;
+  margin: 5px 0 10px 0;
+  border: none;
+}
+#section_insertion_produit > fieldset > form > input[type="submit"] {
+  height: 2.5vh;
+  width: 40vw;
+  margin: 5px 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+#section_insertion_produit > fieldset > form > input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+#section_insertion_produit > fieldset > form > .radioContainer {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+#section_insertion_produit > fieldset > form > .radioContainer > label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: double;
+}
+/*insertproduit.php fin*/
 /* produit.php */
 .container {
   height: auto;
@@ -519,6 +677,9 @@ input:focus {
 }
 .retour_wrapper > a:hover {
   text-decoration: underline;
+}
+.retour_wrapper > h4 {
+  text-align: center;
 }
 /* liens retour fin*/
 /* produit.php fin*/

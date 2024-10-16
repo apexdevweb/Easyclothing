@@ -1,7 +1,12 @@
 <?php
+session_start();
+require("backend/administrator/loginAdmin.php");
 require("backend/users/login.php");
 ?>
 <header>
+    <?php
+    include("backend/administrator/adminpanel.php");
+    ?>
     <?php
     if (isset($_SESSION['validAuth'])) {
     ?>
