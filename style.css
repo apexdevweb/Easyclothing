@@ -426,7 +426,7 @@ header {
   padding: 5px;
   height: 35vh;
   width: 40vw;
-  background-color: bisque;
+  background-color: antiquewhite;
   box-shadow: var(--box-shadow-bxshw1);
   overflow: hidden;
 }
@@ -471,6 +471,7 @@ article > figure > figcaption > .shop_icon {
 }
 
 /* grille de vêtement fin*/
+
 /* section 2 fin*/
 /* signup */
 legend > #signupH2 {

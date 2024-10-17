@@ -34,11 +34,13 @@ include("includes/head.php");
         </section>
         <br>
         <section id="#S2">
+            <!-- trie des catégorie et genre et marques -->
             <form method="POST" id="formS2">
                 <ul id="ul_categorie">
-                    <li class="li_categorie"><a href="includes/homme.php"><span>H</span>omme</a></li>
-                    <li class="li_categorie"><a href="includes/femme.php"><span>F</span>emme</a></li>
-                    <li class="li_categorie"><a href="includes/adoEnfant.php"><span>A</span>dos-<span>E</span>nfant</a></li>
+                    <li class="li_categorie"><a href="#"><span>T</span>out</a></li>
+                    <li class="li_categorie"><a href="#"><span>H</span>omme</a></li>
+                    <li class="li_categorie"><a href="#"><span>F</span>emme</a></li>
+                    <li class="li_categorie"><a href="#"><span>A</span>dos-<span>E</span>nfant</a></li>
                 </ul>
                 <div class="categorie_container">
                     <label for="categorie">Catégorie<i class="fa-solid fa-chevron-right"></i></label>
@@ -60,6 +62,7 @@ include("includes/head.php");
                     <button type="submit" name="marqValide"><i class="fa-solid fa-arrow-down"></i></button>
                 </div>
             </form>
+            <!-- trie des catégorie et genre et marques fin-->
             <br>
             <section id="card_container">
                 <?php
@@ -86,10 +89,11 @@ include("includes/head.php");
                 <?php
                 }
                 ?>
+                </div>
+                </div>
             </section>
         </section>
         <section id="#S3">
-
         </section>
     </main>
     <?php
