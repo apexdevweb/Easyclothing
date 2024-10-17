@@ -34,42 +34,45 @@ include("includes/head.php");
         </section>
         <br>
         <section id="#S2">
-            <form method="GET" id="formS2">
+            <form method="POST" id="formS2">
                 <ul id="ul_categorie">
-                    <li class="li_categorie"><a href="#S2"><span>H</span>omme</a></li>
-                    <li class="li_categorie"><a href="#S2"><span>F</span>emme</a></li>
-                    <li class="li_categorie"><a href="#S2"><span>A</span>dos-<span>E</span>nfant</a></li>
+                    <li class="li_categorie"><a href="includes/homme.php"><span>H</span>omme</a></li>
+                    <li class="li_categorie"><a href="includes/femme.php"><span>F</span>emme</a></li>
+                    <li class="li_categorie"><a href="includes/adoEnfant.php"><span>A</span>dos-<span>E</span>nfant</a></li>
                 </ul>
                 <div class="categorie_container">
                     <label for="categorie">Catégorie<i class="fa-solid fa-chevron-right"></i></label>
-                    <select name="categorie" id="">
-                        <option value="pull">pull</option>
-                        <option value="pentalons">pentalons</option>
-                        <option value="chemise">chemise</option>
+                    <select name="categorie" id="categorie">
+                        <option value="pull">Pull</option>
+                        <option value="pantalons">Pantalons</option>
+                        <option value="chemise">Chemise</option>
                     </select>
+                    <button type="submit" name="cateValide"><i class="fa-solid fa-arrow-down"></i></button>
                 </div>
                 <div class="marque_container">
                     <label for="Marque">Marques<i class="fa-solid fa-chevron-right"></i></label>
-                    <select name="Marque" id="">
-                        <option value="Nike">Nike</option>
-                        <option value="Addidas">Addidas</option>
-                        <option value="Dvs">Dvs</option>
+                    <select name="marque" id="marque">
+                        <option value="tommy hilfiger">Tommy Hilfiger</option>
+                        <option value="quicksilver">Quicksilver</option>
+                        <option value="polo">Polo</option>
+                        <option value="varna">Varna</option>
                     </select>
+                    <button type="submit" name="marqValide"><i class="fa-solid fa-arrow-down"></i></button>
                 </div>
             </form>
             <br>
             <section id="card_container">
                 <?php
-                foreach ($affiche_prod as $sale_prod) {
+                foreach ($affiche_prod as $card_prod) {
                 ?>
                     <div class="card">
                         <article>
-                            <a href="produit.php?id=<?= $sale_prod['id_produit'] ?>"><?= $sale_prod['name_produit'] ?></a>
+                            <a href="produit.php?id=<?= $card_prod['id_produit'] ?>"><?= $card_prod['name_produit'] ?></a>
                             <figure>
-                                <img src="image/imgproduit/<?= $sale_prod['number_produit'] ?>" alt="">
+                                <img src="image/imgproduit/<?= $card_prod['number_produit'] ?>" alt="">
                                 <figcaption>
-                                    <small><?= $sale_prod['marque_produit'] ?></small>
-                                    <small><?= $sale_prod['price_produit'] . " " . "€" ?></small>
+                                    <small><?= $card_prod['marque_produit'] ?></small>
+                                    <small><?= $card_prod['price_produit'] . " " . "€" ?></small>
                                     <br>
                                     <div class="shop_icon">
                                         <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
@@ -89,7 +92,6 @@ include("includes/head.php");
 
         </section>
     </main>
-
     <?php
     include("includes/footer.php");
     include("includes/scriptAddon.php");

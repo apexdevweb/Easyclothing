@@ -346,9 +346,8 @@ header {
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-evenly;
-  height: 20vh;
+  height: auto;
   width: 100%;
-
   box-shadow: var(--box-shadow-bxshw1);
 }
 .categorie_container,
@@ -357,15 +356,30 @@ header {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
+  background-color: antiquewhite;
+}
+.categorie_container > button,
+.marque_container > button {
+  height: 3vh;
+  width: 8vw;
+  background-color: #000;
+  border-radius: 8px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  border: none;
+}
+.categorie_container > button > i,
+.marque_container > button > i {
+  color: #fff;
 }
 .categorie_container > label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 2px;
 }
 .marque_container > label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 2px;
 }
 .categorie_container > label > i {
@@ -377,11 +391,22 @@ header {
 .categorie_container > select {
   font-size: 1rem;
   letter-spacing: 2px;
+  margin-left: 1px;
 }
 .marque_container > select {
   font-size: 1rem;
   letter-spacing: 2px;
+  margin-left: 1px;
 }
+/* slide catégorie & marque*/
+.sub_slide {
+  height: 25vh;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background-color: #000;
+}
+/* slide catégorie & marquefin*/
 /* nav section 2 fin*/
 /* grille de vêtement */
 #card_container {
@@ -393,14 +418,14 @@ header {
   justify-content: space-around;
 }
 .card {
-  margin: auto;
+  margin: 8px 0 8px 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
   padding: 5px;
-  max-height: 40vh;
-  max-width: 40vw;
+  height: 35vh;
+  width: 40vw;
   background-color: bisque;
   box-shadow: var(--box-shadow-bxshw1);
   overflow: hidden;
@@ -415,7 +440,7 @@ article {
   text-align: center;
 }
 article > a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-shadow: var(--text-shadow-txshw2);
   letter-spacing: 1px;
   color: #000;
@@ -426,8 +451,8 @@ article > a:hover {
   transition: 0.3s ease-in-out;
 }
 article > figure > img {
-  max-height: 20vh;
-  max-width: 40vw;
+  height: 15vh;
+  width: 40vw;
 }
 article > figure > figcaption {
   display: flex;

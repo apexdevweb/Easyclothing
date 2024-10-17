@@ -1,3 +1,6 @@
+<?php
+require("backend/afficheProduit.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <?php
@@ -10,12 +13,21 @@ include("includes/head.php");
     include("includes/header.php");
     ?>
     <main>
-        <div class="container">
-            <div class="A"><img src="image/701d72933cb740b89850bdc49330d701.webp"></div>
-            <div class="E"><img src="image/cb7d558bf73f4b40b44baf29ee52b793.webp"></div>
-            <div class="F"><img src="image/cb7d558bf73f4b40b44baf29ee52b793.webp"></div>
-            <div class="G"><img src="image/cb7d558bf73f4b40b44baf29ee52b793.webp"></div>
-        </div>
+        <?php
+        foreach ($affiche_prod as $sale_prod) {
+            if ($_GET['id'] == $sale_prod['id_produit']) {
+
+        ?>
+                <div class="container">
+                    <div class="A"><img src="image/imgproduit/<?= $sale_prod['number_produit'] ?>"></div>
+                    <div class="E"><img src="image/cb7d558bf73f4b40b44baf29ee52b793.webp"></div>
+                    <div class="F"><img src="image/cb7d558bf73f4b40b44baf29ee52b793.webp"></div>
+                    <div class="G"><img src="image/cb7d558bf73f4b40b44baf29ee52b793.webp"></div>
+                </div>
+        <?php
+            }
+        }
+        ?>
         <br>
         <div class="shop_icon_produit">
             <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
