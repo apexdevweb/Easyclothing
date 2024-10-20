@@ -13,7 +13,7 @@ require("backend/users/login.php");
         <div id="session_user_container">
             <h4><span>B</span>ienvenue<?= " " . $_SESSION['last_name'] ?></h4>
             <ul id="user_ul">
-                <li class="user_li"><a href="#"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li class="user_li"><a href="../pannier.php"><i class="fa-solid fa-basket-shopping"></i></a></li>
                 <li class="user_li"><a href="#"><i class="fa-solid fa-user-gear"></i></a></li>
             </ul>
         </div>
@@ -33,8 +33,8 @@ require("backend/users/login.php");
             <li class="firstLi"><a href="#"><span>H</span>iver</a></li>
             <li class="firstLi">
                 <form method="POST" id="navForm">
-                    <input type="email" name="Mail" id="" placeholder="e-mail">
-                    <input type="password" name="Pass" id="" placeholder="password">
+                    <input type="email" name="Mail" placeholder="e-mail">
+                    <input type="password" name="Pass" placeholder="password">
                     <input type="submit" name="Login" value="Login">
                 </form>
                 <p><a href="signup.php"><span>C</span>reer un compte<i class="fa-solid fa-arrow-right"></i></a></p>

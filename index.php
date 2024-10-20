@@ -18,14 +18,67 @@ include("includes/head.php");
             <!-- Swiper -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="image/slide-banner/modeHA.jpg" alt="modeHA"></div>
-                    <div class="swiper-slide"><img src="image/slide-banner/modeFD.jpg" alt="modeFD"></div>
-                    <div class="swiper-slide"><img src="image/slide-banner/modeHB.jpg" alt="modeHB"></div>
-                    <div class="swiper-slide"><img src="image/slide-banner/modeFA.jpg" alt="modeFA"></div>
-                    <div class="swiper-slide"><img src="image/slide-banner/modeHC.jpg" alt="modeHC"></div>
-                    <div class="swiper-slide"><img src="image/slide-banner/modeFC.jpg" alt="modeFC"></div>
-                    <div class="swiper-slide"><img src="image/slide-banner/modeEA.jpg" alt="modeEA"></div>
-                    <div class="swiper-slide"><img src="image/slide-banner/modeFB.jpg" alt="modeFB"></div>
+                    <div class="swiper-slide">
+                        <img src="image/slide-banner/modeHA.jpg" alt="modeHA">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>E</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFD.jpg" alt="modeFD">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>A</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeHB.jpg" alt="modeHB">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>S</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFA.jpg" alt="modeFA">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>Y</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeHC.jpg" alt="modeHC">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>C</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFC.jpg" alt="modeFC">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>L</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeEA.jpg" alt="modeEA">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>O</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFB.jpg" alt="modeFB">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>T</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFB.jpg" alt="modeFB">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>H</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFB.jpg" alt="modeFB">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>I</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFB.jpg" alt="modeFB">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>N</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/slide-banner/modeFB.jpg" alt="modeFB">
+                        <div class="PA_container">
+                            <p class="letter_anime"><span>G</span></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -37,9 +90,8 @@ include("includes/head.php");
             <!-- trie des catégorie et genre et marques -->
             <form method="POST" id="formS2">
                 <ul id="ul_categorie">
-                    <li class="li_categorie"><a href="#"><span>T</span>out</a></li>
-                    <li class="li_categorie"><a href="#"><span>H</span>omme</a></li>
-                    <li class="li_categorie"><a href="#"><span>F</span>emme</a></li>
+                    <li class="li_categorie"><a href="homme.php"><span>H</span>omme</a></li>
+                    <li class="li_categorie"><a href="femme.php"><span>F</span>emme</a></li>
                     <li class="li_categorie"><a href="#"><span>A</span>dos-<span>E</span>nfant</a></li>
                 </ul>
                 <div class="categorie_container">
@@ -75,7 +127,7 @@ include("includes/head.php");
                                 <img src="image/imgproduit/<?= $card_prod['number_produit'] ?>" alt="">
                                 <figcaption>
                                     <small><?= $card_prod['marque_produit'] ?></small>
-                                    <small><?= $card_prod['price_produit'] . " " . "€" ?></small>
+                                    <small><?= number_format($card_prod['price_produit'], 2, ',', '') . " " . "€" ?></small>
                                     <br>
                                     <div class="shop_icon">
                                         <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
