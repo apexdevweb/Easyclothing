@@ -952,8 +952,7 @@ select {
 }
 #card-element {
   height: auto;
-  width: 100%;
-  background-color: #777;
+  width: 50vw;
   color: #fff;
 }
 button[type="submit"] {
@@ -968,5 +967,7 @@ button[type="submit"] {
   letter-spacing: 2px;
 }
 button[type="submit"]:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease;
 }
 /* commandFrm.php fin*/

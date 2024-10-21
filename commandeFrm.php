@@ -39,8 +39,11 @@ include("includes/head.php");
                 </article>
                 <br>
                 <form action="backend/charge.php" method="POST" id="payment-form">
+                    <input type="text" name="f_name" placeholder="Nom">
+                    <input type="text" name="l_name" placeholder="Prenom">
                     <div id="card-element"></div>
                     <div id="card-error" role="alert"></div>
+                    <input type="hidden" name="amount" value="10">
                     <button type="submit">Payer</button>
                 </form>
             <?php

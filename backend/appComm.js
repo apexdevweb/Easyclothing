@@ -6,7 +6,7 @@ let elements = stripe.elements();
 let card = elements.create("card");
 card.mount("#card-element");
 
-card.addEventListenenr("change", function (event) {
+card.addEventListener("change", function (event) {
   let displayError = document.getElementById("card-erros");
 
   if (event.error) {
@@ -17,7 +17,7 @@ card.addEventListenenr("change", function (event) {
 });
 
 let form = document.getElementById("#payment-form");
-form.addEventListenenr("submit", function (event) {
+form.addEventListener("submit", function (event) {
   event.preventDedfault();
 
   stripe.createToken(card).then(function (result) {
@@ -25,12 +25,12 @@ form.addEventListenenr("submit", function (event) {
       let errorElement = document.querySelector("#card-errors");
       errorElement.textContent = result.error.message;
     } else {
-      stripeTokenhandler(result.token);
+      stripeTokenHandler(result.token);
     }
   });
 });
 
-function stripeTokenhandler(token) {
+function stripeTokenHandler(token) {
   let form = document.querySelector("#payment-form");
   let hiddenInput = document.createElement("input");
 
