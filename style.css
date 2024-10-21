@@ -852,7 +852,7 @@ table {
   margin-right: auto;
   box-sizing: border-box;
   height: auto;
-  width: 50vw;
+  max-width: 50vw;
   overflow: hidden;
 }
 th {
@@ -891,7 +891,7 @@ td > p {
 }
 td > img {
   height: 20vh;
-  width: 15vw;
+  width: auto;
 }
 td > a {
   color: red;
