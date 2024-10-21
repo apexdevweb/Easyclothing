@@ -18,7 +18,7 @@ include("includes/head.php");
             <?php
             include("includes/panierArticle.php");
             ?>
-            <a href="#" id="panierCom" class="liens">Passer commande <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="commandeFrm.php" id="panierCom" class="liens">Passer commande <i class="fa-solid fa-arrow-right"></i></a>
         </section>
         <br>
         <div class="retour_wrapper">

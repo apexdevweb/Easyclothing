@@ -57,7 +57,7 @@ if (isset($_SESSION['validAuth'])) {
                     </tr>
                     <tr>
                         <td>
-                            <a href="backend/pannierScript.php?action=remove&id=<?= $produit['id_produit'] ?>">Supprimer</a>
+                            <a href="backend/pannierScript.php?action=remove&id=<?= $produit['id_produit'] ?>"><i class="fa-solid fa-trash-can"></i></a>
                         </td>
                     </tr>
                 </table>

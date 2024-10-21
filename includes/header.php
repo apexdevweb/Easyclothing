@@ -12,9 +12,12 @@ require("backend/users/login.php");
         <div id="session_user_container">
             <h4><span>B</span>ienvenue<?= " " . $_SESSION['last_name'] ?></h4>
             <ul id="user_ul">
-                <li class="user_li"><a href="../pannier.php"><label for="shopicon">
+                <li class="user_li">
+                    <a href="../pannier.php">
+                        <label for="shopicon">
                             <p id="compteur_panier"></p>
-                        </label><i nam="shopicon" class="fa-solid fa-basket-shopping"></i></a></li>
+                        </label><i nam="shopicon" class="fa-solid fa-basket-shopping"></i></a>
+                </li>
                 <li class="user_li"><a href="#"><i class="fa-solid fa-user-gear"></i></a></li>
             </ul>
         </div>

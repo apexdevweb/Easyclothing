@@ -829,7 +829,7 @@ select {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 #S3 > p {
   height: auto;
@@ -848,6 +848,7 @@ select {
 }
 
 table {
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -856,7 +857,6 @@ table {
   overflow: hidden;
 }
 th {
-  padding: 5px;
   height: auto;
   width: auto;
   background-color: #000;
@@ -883,15 +883,13 @@ td {
   background-color: #fff;
 }
 td > p {
-  padding: 5px;
   text-align: center;
   height: auto;
   min-width: 5vw;
-  background-color: aquamarine;
 }
 td > img {
-  height: 20vh;
-  width: auto;
+  height: 10vh;
+  max-width: 50vw;
 }
 td > a {
   color: red;
@@ -904,3 +902,71 @@ select {
   max-width: 25vw;
 }
 /* Panier fin*/
+/* commandFrm.php */
+#comInfos {
+  height: auto;
+  width: 100%;
+}
+#comInfosField {
+  text-align: left;
+  height: auto;
+  width: 80vw;
+}
+#comInfos > fieldset > legend {
+  text-align: center;
+  letter-spacing: 3px;
+}
+#comInfos > fieldset > legend > span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
+#comInfos > fieldset > ul {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+#comInfos > fieldset > ul > li {
+  list-style-type: none;
+}
+#comInfos > fieldset > ul > li > p {
+  list-style-type: none;
+}
+#comInfos > fieldset > ul > li p > span {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  text-shadow: var(--text-shadow-txshw1);
+}
+#payment-form {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#card-element {
+  height: auto;
+  width: 100%;
+  background-color: #777;
+  color: #fff;
+}
+button[type="submit"] {
+  text-align: center;
+  height: 4vh;
+  max-width: 25%;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+button[type="submit"]:hover {
+}
+/* commandFrm.php fin*/
