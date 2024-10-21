@@ -9,7 +9,7 @@ body {
 }
 :root {
   --text-shadow-txshw1: 0px 0px 3px #000;
-  --text-shadow-txshw2: 0px 0px 1px #000;
+  --text-shadow-txshw2: 0px 0px 1px #fff;
   --box-shadow-bxshw1: 0px 0px 5px #000;
 }
 /* icone fontawesom */
@@ -146,6 +146,22 @@ header {
 }
 .user_li {
   list-style-type: none;
+}
+.user_li > a {
+  text-decoration: none;
+}
+#compteur_panier {
+  padding: 0;
+  margin: auto;
+  height: 20px;
+  width: 25px;
+  color: #000;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  font-weight: 600;
 }
 
 /* session navigation utilisateur fin*/
@@ -803,3 +819,64 @@ select {
   }
 }
 /*page homme/femme/adoEfant.php */
+/* Panier */
+#S3 {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 25vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  height: auto;
+  width: 50vw;
+  overflow: hidden;
+}
+th {
+  height: auto;
+  width: auto;
+  background-color: #000;
+}
+th > h4 {
+  color: #fff;
+  letter-spacing: 3px;
+}
+th > h4 > span {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: var(--text-shadow-txshw2);
+}
+tr {
+  height: auto;
+  width: auto;
+  background-color: bisque;
+}
+td {
+  text-align: center;
+  height: auto;
+  width: auto;
+  background-color: #fff;
+}
+td > img {
+  height: 20vh;
+  width: 15vw;
+}
+td > a {
+  color: red;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+td > input,
+select {
+  height: auto;
+  max-width: 25vw;
+}
+/* Panier fin*/

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("backend/afficheProduit.php");
 ?>
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ include("includes/head.php");
                                     <small><?= $card_fm['price_produit'] . " " . "€" ?></small>
                                     <br>
                                     <div class="shop_icon">
-                                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="backend/pannierScript.php?id=<?= $card_fm['id_produit'] ?>"><i class="fa-solid fa-cart-shopping"></i></a>
                                         <a href=""><i class="fa-regular fa-heart"></i></a>
                                         <a href=""><i class="fa-solid fa-share-nodes"></i></a>
                                     </div>

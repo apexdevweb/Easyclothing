@@ -11,3 +11,5 @@
    <script src="../asset/swiperJs.js"></script>
    <!-- ↓↓↓swipperLettreAnimeJS↓↓↓ -->
    <script src="../asset/letterAnime.js"></script>
+   <!-- ↓↓↓compteur d'article↓↓↓ -->
+   <script src="../asset/articleCount.js"></script>

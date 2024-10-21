@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("backend/afficheProduit.php");
 ?>
 <!DOCTYPE html>
@@ -30,7 +31,7 @@ include("includes/head.php");
         ?>
         <br>
         <div class="shop_icon_produit">
-            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="backend/pannierScript.php?id=<?= $sale_prod['id_produit'] ?>"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href=""><i class="fa-regular fa-heart"></i></a>
             <a href=""><i class="fa-solid fa-share-nodes"></i></a>
         </div>

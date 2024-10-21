@@ -1,7 +1,7 @@
 <?php
-session_start();
 require("backend/administrator/loginAdmin.php");
 require("backend/users/login.php");
+
 ?>
 <header>
     <?php
@@ -13,7 +13,9 @@ require("backend/users/login.php");
         <div id="session_user_container">
             <h4><span>B</span>ienvenue<?= " " . $_SESSION['last_name'] ?></h4>
             <ul id="user_ul">
-                <li class="user_li"><a href="../pannier.php"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li class="user_li"><a href="../pannier.php"><label for="shopicon">
+                            <p id="compteur_panier"></p>
+                        </label><i nam="shopicon" class="fa-solid fa-basket-shopping"></i></a></li>
                 <li class="user_li"><a href="#"><i class="fa-solid fa-user-gear"></i></a></li>
             </ul>
         </div>
@@ -27,7 +29,7 @@ require("backend/users/login.php");
     </div>
     <nav id="firstNav">
         <ul class="myLinks">
-            <li class="firstLi"><a href="#"><span>P</span>rintemp </a></li>
+            <li class="firstLi"><a href="#"><span>P</span>rintemp</a></li>
             <li class="firstLi"><a href="#"><span>E</span>te</a></li>
             <li class="firstLi"><a href="#"><span>A</span>utomne</a></li>
             <li class="firstLi"><a href="#"><span>H</span>iver</a></li>

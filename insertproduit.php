@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("backend/administrator/insertProduitScript.php");
 $product_number = mt_rand(1000, 50000);
 ?>
