@@ -150,7 +150,7 @@ header {
 .user_li > a {
   text-decoration: none;
 }
-#compteur_panier {
+.compteur_panier {
   padding: 0;
   margin: auto;
   height: 20px;
@@ -824,12 +824,27 @@ select {
   margin: 0;
   padding: 0;
   height: auto;
-  width: 25vw;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+#S3 > p {
+  height: auto;
+  width: auto;
+}
+
+.liens {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  color: #000;
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  visibility: visible;
 }
 
 table {
@@ -841,6 +856,7 @@ table {
   overflow: hidden;
 }
 th {
+  padding: 5px;
   height: auto;
   width: auto;
   background-color: #000;
@@ -860,10 +876,18 @@ tr {
   background-color: bisque;
 }
 td {
+  padding: 5px;
   text-align: center;
   height: auto;
   width: auto;
   background-color: #fff;
+}
+td > p {
+  padding: 5px;
+  text-align: center;
+  height: auto;
+  min-width: 5vw;
+  background-color: aquamarine;
 }
 td > img {
   height: 20vh;

@@ -14,80 +14,11 @@ include("includes/head.php");
     include("includes/header.php");
     ?>
     <main>
-        <section id="#S3">
+        <section id="S3">
             <?php
-            if (isset($_SESSION['panier']) && is_array($_SESSION['panier']) && !empty($_SESSION['panier'])) {
-                foreach ($_SESSION['panier'] as $produit) {
-                    if (is_array($produit)) {
+            include("includes/panierArticle.php");
             ?>
-                        <table class="com_tab">
-                            <th>
-                                <h4><span>M</span>arque</h4>
-                            </th>
-                            <th>
-                                <h4><span>G</span>enre</h4>
-                            </th>
-                            <th>
-                                <h4><span>T</span>aille</h4>
-                            </th>
-                            <th>
-                                <h4><span>N</span>uméro</h4>
-                            </th>
-                            <th>
-                                <h4><span>P</span>rix</h4>
-                            </th>
-                            <th>
-                                <h4><span>Q</span>uantité</h4>
-                            </th>
-                            <tr>
-                                <td>
-                                    <p><?= $produit['marque_produit'] ?></p>
-                                </td>
-                                <td>
-                                    <p><?= $produit['genre_produit'] ?></p>
-                                </td>
-                                <td>
-                                    <select name="taille" id="">
-                                        <option value="S">S</option>
-                                        <option value="M">M</option>
-                                        <option value="XL">XL</option>
-                                        <option value="XXL">XXL</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <p><?= $produit['number_produit'] ?></p>
-                                </td>
-                                <td>
-                                    <p><?= number_format($produit['price_produit'], 2, ',', '') . " " . "€" ?></p>
-
-                                </td>
-                                <td>
-                                    <input type="number" value="1">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="image/imgproduit/<?= $produit['number_produit'] ?>">
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="backend/pannierScript.php?action=remove&id=<?= $produit['id_produit'] ?>">Supprimer</a>
-                                </td>
-                            </tr>
-
-                        </table>
-            <?php
-                    }
-                }
-            } else {
-                echo "<p style='text-align:center;font-size:1.3rem;'>" . "Votre panier est vide!" . "</p>";
-            }
-            ?>
-            <form action="" method="POST">
-                <input type="submit" value="Passer commande">
-            </form>
+            <a href="#" id="panierCom" class="liens">Passer commande <i class="fa-solid fa-arrow-right"></i></a>
         </section>
         <br>
         <div class="retour_wrapper">
@@ -98,6 +29,29 @@ include("includes/head.php");
     include("includes/footer.php");
     include("includes/scriptAddon.php");
     ?>
+    <script type="text/javascript">
+        function link_com() {
+            const tablesProd = document.querySelectorAll(".com_tab");
+            const commandeAffiche = document.getElementById("panierCom");
+            let hasItemsInCart = false;
+            // Vérifie s'il y a au moins un élément dans le panier
+            for (let i = 0; i < tablesProd.length; i++) {
+                let prodpanier = tablesProd[i];
+                if (prodpanier) { // Vérifie si l'élément existe
+                    hasItemsInCart = true;
+                    break; // Si un élément est trouvé, on peut arrêter la boucle
+                }
+            }
+            // Affiche ou cache le lien selon le contenu du panier
+            if (hasItemsInCart) {
+                commandeAffiche.classList.add("liens"); // Ajoute la classe pour rendre visible
+            } else {
+                commandeAffiche.style.display = "none";
+                commandeAffiche.classList.remove("liens"); // Retire la classe pour rendre invisible
+            }
+        }
+        link_com();
+    </script>
 </body>
 
 </html>

@@ -2,7 +2,28 @@
 session_start();
 require("database.php"); // Inclure la connexion à la base de données
 
-// Vérifier si l'ID du produit est passé en paramètre dans l'URL
+// Vérifier l'action passée dans l'URL
+if (isset($_GET['action']) && $_GET['action'] == 'remove' && isset($_GET['id'])) {
+    $id_prod = $_GET['id'];
+
+    // Vérifier si le panier est initialisé
+    if (isset($_SESSION['panier']) && is_array($_SESSION['panier'])) {
+        // Chercher le produit dans le panier et le supprimer
+        foreach ($_SESSION['panier'] as $index => $produit) {
+            if ($produit['id_produit'] == $id_prod) {
+                unset($_SESSION['panier'][$index]); // Supprimer le produit du panier
+                $_SESSION['panier'] = array_values($_SESSION['panier']); // Réindexer le tableau
+                break;
+            }
+        }
+    }
+
+    // Redirection après suppression
+    header("Location: ../pannier.php");
+    exit();
+}
+
+// Code existant pour l'ajout au panier
 if (isset($_GET['id'])) {
     $id_prod = $_GET['id'];
 
@@ -36,13 +57,10 @@ if (isset($_GET['id'])) {
         }
 
         // Redirection après l'ajout au panier
-        header("Location: ../pannier.php"); // Rediriger vers la page d'accueil (ou autre page)
+        header("Location: ../pannier.php");
         exit();
     } else {
         // Le produit n'existe pas dans la base de données
         echo "Le produit n'existe pas.";
     }
-} else {
-    // Pas d'ID de produit fourni
-    // echo "Aucun produit sélectionné.";
 }

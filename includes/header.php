@@ -1,7 +1,6 @@
 <?php
 require("backend/administrator/loginAdmin.php");
 require("backend/users/login.php");
-
 ?>
 <header>
     <?php
