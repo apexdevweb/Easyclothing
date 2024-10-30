@@ -7,7 +7,7 @@ let card = elements.create("card");
 card.mount("#card-element");
 
 card.addEventListener("change", function (event) {
-  let displayError = document.getElementById("card-erros");
+  let displayError = document.getElementById("card-errors");
 
   if (event.error) {
     displayError.textContent = event.error.message;
@@ -16,7 +16,7 @@ card.addEventListener("change", function (event) {
   }
 });
 
-let form = document.getElementById("#payment-form");
+let form = document.getElementById("payment-form");
 form.addEventListener("submit", function (event) {
   event.preventDedfault();
 

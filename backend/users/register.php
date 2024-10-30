@@ -17,7 +17,7 @@ if (isset($_POST['register'])) {
         if (!$user_mail) {
             $errors[] = "L'adresse mail est invalide";
         }
-
+        //verifie que le numéro de téléphone est réel
         if (!preg_match('/^[0-9]{10}$/', $user_phone)) {
             $errorMs[] = "Numéro de téléphone invalide";
         }

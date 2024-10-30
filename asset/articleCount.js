@@ -1,5 +1,5 @@
 function article_count() {
-  const tables = document.querySelectorAll(".com_tab");
+  const  tables= document.querySelectorAll(".com_tab");
   const countAffiche = document.getElementById("compteur_panier");
   if (tables.length > 0) {
     countAffiche.classList.add("compteur_panier");
