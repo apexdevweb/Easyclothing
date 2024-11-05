@@ -11,10 +11,9 @@ include("includes/head.php");
 <body>
     <?php
     include("includes/logo.php");
-    // include("includes/header.php");
     ?>
     <main>
-        <section id="#S3">
+        <section id="S3">
             <?php
             if (isset($_SESSION['validAuth'])) {
             ?>
@@ -23,16 +22,16 @@ include("includes/head.php");
                         <legend><span>C</span>ommande <span>p</span>our</legend>
                         <ul>
                             <li>
-                                <p><span>Nom:</span> <?= $_SESSION['first_name'] ?></p>
+                                <p><span>Nom:</span> <?= $_SESSION['first_name'] ?? 'Nom non défini' ?></p>
                             </li>
                             <li>
-                                <p><span>Prenom:</span> <?= $_SESSION['last_name'] ?></p>
+                                <p><span>Prénom:</span> <?= $_SESSION['last_name'] ?? 'Prénom non défini' ?></p>
                             </li>
                             <li>
-                                <p><span>Adresse:</span> <?= $_SESSION['adresse'] ?></p>
+                                <p><span>Adresse:</span> <?= $_SESSION['adresse'] ?? 'Adresse non définie' ?></p>
                             </li>
                             <li>
-                                <p><span>Tel:</span> <?= $_SESSION['phone_number'] ?></p>
+                                <p><span>Tel:</span> <?= $_SESSION['phone_number'] ?? 'Téléphone non défini' ?></p>
                             </li>
                         </ul>
                     </fieldset>
@@ -46,23 +45,22 @@ include("includes/head.php");
                                 $total += $produit['price_produit'];
                     ?>
                                 <fieldset id="comInfosField">
-                                    <legend><span><?= $produit['name_produit']  ?></span></legend>
+                                    <legend><span><?= htmlspecialchars($produit['name_produit']) ?></span></legend>
                                     <ul>
                                         <li>
-                                            <p><span>Marque:</span> <?= $produit['marque_produit'] ?></p>
-
+                                            <p><span>Marque:</span> <?= htmlspecialchars($produit['marque_produit']) ?></p>
                                         </li>
                                         <li>
-                                            <img src="image/imgproduit/<?= $produit['number_produit'] ?>" style="max-height:25vh; max-width:20vw;">
+                                            <img src="image/imgproduit/<?= htmlspecialchars($produit['number_produit']) ?>" style="max-height:25vh; max-width:20vw;">
                                         </li>
                                         <li>
-                                            <p><span>Catégorie:</span> <?= $produit['categorie_produit'] ?></p>
+                                            <p><span>Catégorie:</span> <?= htmlspecialchars($produit['categorie_produit']) ?></p>
                                         </li>
                                         <li>
-                                            <p><span>Genre:</span> <?= $produit['genre_produit'] ?></p>
+                                            <p><span>Genre:</span> <?= htmlspecialchars($produit['genre_produit']) ?></p>
                                         </li>
                                         <li>
-                                            <p class="tarif"><span>Prix:</span><?= number_format($produit['price_produit'], 2, ',', '') . " " . "€" ?></p>
+                                            <p class="tarif"><span>Prix:</span> <?= number_format($produit['price_produit'], 2, ',', '') . " €" ?></p>
                                         </li>
                                     </ul>
                                 </fieldset>
@@ -72,23 +70,24 @@ include("includes/head.php");
                     }
                     ?>
                 </article>
-                <p id="totalPrice"><span>T</span>otal : <?= number_format($total, 2, ',', '') . " " . "€" ?></p>
+                <p id="totalPrice"><span>T</span>otal : <?= number_format($total, 2, ',', '') . " €" ?></p>
                 <br>
                 <form action="backend/charge.php" method="POST" id="payment-form">
-                    <input type="text" name="f_name" value="<?= $_SESSION['first_name'] ?>">
-                    <input type="text" name="l_name" value="<?= $_SESSION['last_name'] ?>">
+                    <input type="text" name="f_name" value="<?= htmlspecialchars($_SESSION['first_name'] ?? '') ?>">
+                    <input type="text" name="l_name" value="<?= htmlspecialchars($_SESSION['last_name'] ?? '') ?>">
                     <br>
                     <div id="card-element"></div>
                     <div id="card-error" role="alert"></div>
                     <br>
-                    <input type="hidden" name="amount" value="<?= $total ?>">
+                    <input type="hidden" name="amount" value="<?= htmlspecialchars($total) ?>">
                     <br>
                     <button type="submit">Payer</button>
                 </form>
             <?php
+            } else {
+                echo "<p>Utilisateur non authentifié.</p>";
             }
             ?>
-            <br>
             <br>
             <div class="retour_wrapper">
                 <a href="index.php"><i class="fa-solid fa-arrow-left"></i><span>R</span>etour</a>

@@ -46,7 +46,7 @@ if (isset($_SESSION['validAuth'])) {
 
                         </td>
                         <td>
-                            <input type="number" value="1">
+                            <input type="number" name="quantite" value="1">
                         </td>
                     </tr>
                     <tr>
