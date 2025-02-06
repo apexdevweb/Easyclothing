@@ -1,12 +1,28 @@
 /******↓↓↓RESPONSIVE SMARTPHONE↓↓↓******/
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) {
+  .card {
+    height: 45vh;
+    width: 40vw;
+  }
+  article > figure > img {
+    height: 25vh;
+    width: 35vw;
+  }
 }
 /******↑↑↑RESPONSIVE SMARTPHONE FIN↑↑↑******/
 /************************************************/
 /************************************************/
 /************************************************/
 /******************RESPONSIVE**TABLETTE**********/
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    height: 45vh;
+    width: 28vw;
+  }
+  article > figure > img {
+    height: 25vh;
+    width: 25vw;
+  }
 }
 
 /******↑↑↑RESPONSIVE TABLETTE FIN↑↑↑******/
@@ -15,5 +31,13 @@
 /************************************************/
 /******↓↓↓RESPONSIVE LAPTOP↓↓↓******/
 @media only screen and (min-width: 1025px) {
+  .card {
+    height: 45vh;
+    width: 20vw;
+  }
+  article > figure > img {
+    height: 25vh;
+    width: 17vw;
+  }
 }
 /******↑↑↑RESPONSIVE LAPTOP FIN↑↑↑******/

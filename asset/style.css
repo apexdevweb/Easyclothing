@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   overflow-x: hidden;
 }
@@ -8,9 +9,13 @@ body {
   overflow-x: hidden;
 }
 :root {
+  --font-family-ftfmlOne: "Poppins", serif;
   --text-shadow-txshw1: 0px 0px 3px #000;
   --text-shadow-txshw2: 0px 0px 1px #fff;
   --box-shadow-bxshw1: 0px 0px 5px #000;
+}
+main {
+  font-family: var(--font-family-ftfmlOne);
 }
 /* icone fontawesom */
 i {
@@ -342,9 +347,10 @@ header {
   overflow: hidden;
 }
 .PA_container > p > span {
+  margin: 0;
   height: auto;
   width: auto;
-  font-size: 25rem;
+  font-size: 20rem;
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -428,13 +434,13 @@ header {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: antiquewhite;
 }
 .categorie_container > button,
 .marque_container > button {
   height: 3vh;
-  width: 8vw;
+  width: 10vw;
   background-color: #000;
   border-radius: 8px;
   margin-left: 3px;
@@ -495,7 +501,7 @@ header {
   align-items: center;
   justify-content: space-around;
   padding: 5px;
-  height: 35vh;
+  height: 40vh;
   width: 40vw;
   background-color: antiquewhite;
   box-shadow: var(--box-shadow-bxshw1);
@@ -785,7 +791,7 @@ select {
   height: auto;
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -981,3 +987,32 @@ button[type="submit"]:hover {
   text-shadow: var(--text-shadow-txshw1);
 }
 /* commandFrm.php fin*/
+/* footer */
+footer {
+  min-height: 20vh;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background-color: #000;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px #000;
+}
+.foot__container {
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+}
+.foot__container > p,
+small {
+  color: #fff;
+  font-family: var(--font-family-ftfmlOne);
+}
+.foot__container > hr {
+  margin-left: 0;
+  border: none;
+  height: 2px;
+  max-width: 50vw;
+  background-color: #fff;
+}
+/* footer fin*/
