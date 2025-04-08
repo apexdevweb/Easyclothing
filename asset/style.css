@@ -404,6 +404,7 @@ header {
 }
 .li_categorie > a {
   font-size: 1.1rem;
+  font-weight: 800;
   color: #000;
   text-decoration: none;
   letter-spacing: 1px;
@@ -416,7 +417,6 @@ header {
   font-size: 1.3rem;
   text-decoration: none;
   color: #000;
-  text-shadow: var(--text-shadow-txshw1);
 }
 #formS2 {
   display: flex;
@@ -435,7 +435,9 @@ header {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
-  background-color: antiquewhite;
+  background: #ffefba;
+  background: -webkit-linear-gradient(to right, #ffefba, #ffffff);
+  background: linear-gradient(to right, #ffefba, #ffffff);
 }
 .categorie_container > button,
 .marque_container > button {
@@ -503,7 +505,9 @@ header {
   padding: 5px;
   height: 40vh;
   width: 40vw;
-  background-color: antiquewhite;
+  background: #ffefba;
+  background: -webkit-linear-gradient(to right, #ffefba, #ffffff);
+  background: linear-gradient(to right, #ffefba, #ffffff);
   box-shadow: var(--box-shadow-bxshw1);
   overflow: hidden;
 }
@@ -518,14 +522,15 @@ article {
 }
 article > a {
   font-size: 1.1rem;
+  font-weight: 600;
   text-shadow: var(--text-shadow-txshw2);
   letter-spacing: 1px;
   color: #000;
 }
 article > a:hover {
   transform: scale(1.04);
-  letter-spacing: 3px;
-  transition: 0.3s ease-in-out;
+  letter-spacing: px;
+  transition: 0.2s ease-in-out;
 }
 article > figure > img {
   height: 15vh;
